@@ -28,7 +28,7 @@ void GridGameListView::setCursor(FileData* file)
 
 bool GridGameListView::input(InputConfig* config, Input input)
 {
-	if(config->isMappedTo("left", input) || config->isMappedTo("right", input))
+	if(config->isMappedTo("pagedown", input) || config->isMappedTo("pageup", input))
 		return GuiComponent::input(config, input);
 
 	return ISimpleGameListView::input(config, input);
